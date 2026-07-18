@@ -14,9 +14,14 @@
       }
       .test:hover{
         background-color: white;
-        transform: scale(1.1);  
-        
+        transform: scale(1.1);
       }
+      .product-card { transition: transform 0.3s, box-shadow 0.3s; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+      .product-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+      .product-card .card-img-top { height: 200px; object-fit: contain; padding: 1.5rem; transition: transform 0.3s; }
+      .product-card:hover .card-img-top { transform: scale(1.05); }
+      .rating-stars { font-size: 0.85rem; }
+      .carousel-item .row { min-height: 300px; }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -222,17 +227,17 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-3">
-                  <img class="img-fluid" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <img class="img-fluid" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1452&auto=format&fit=crop" alt="MacBook Pro">
                 </div>
                 <div class="col-sm-6">
-                  <h6>MacBook M5</h6>
-                  <p>Lorem, ipsum dolor.</p>
+                  <h6>MacBook Pro M3</h6>
+                  <p class="small text-muted">36GB RAM, 1TB SSD, Space Black</p>
                 </div>
                 <div class="col-sm-3">
-                  <strong>45000/-</strong>
+                  <strong>₹1,99,999</strong>
                 </div>
               </div>
-              <p class="text-success mx-4">You have saved 14,500/- on this order</p>
+              <p class="text-success mx-4">You have saved ₹14,500 on this order</p>
               <div class="btn-group w-100">
                 <button type="button" class="btn btn-outline-primary">
                   <i class="bi bi-heart"></i>
@@ -250,17 +255,17 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-sm-3">
-                  <img class="img-fluid" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <img class="img-fluid" src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1227&auto=format&fit=crop" alt="iPhone 15 Pro Max">
                 </div>
                 <div class="col-sm-6">
-                  <h6>MacBook M5</h6>
-                  <p>Lorem, ipsum dolor.</p>
+                  <h6>iPhone 15 Pro Max</h6>
+                  <p class="small text-muted">256GB, Natural Titanium</p>
                 </div>
                 <div class="col-sm-3">
-                  <strong>45000/-</strong>
+                  <strong>₹79,999</strong>
                 </div>
               </div>
-              <p class="text-success mx-4">You have saved 14,500/- on this order</p>
+              <p class="text-success mx-4">You have saved ₹9,500 on this order</p>
               <div class="btn-group w-100">
                 <button type="button" class="btn btn-outline-primary">
                   <i class="bi bi-heart"></i>
@@ -283,38 +288,65 @@
      <div class="carousel my-5"  data-bs-ride="carousel" data-bs-interval="3000" >
       <div class="carousel-inner">
         <div class="carousel-item active">
-           <div class="row">
-              <div class="col-sm-6 text-end ">
-                 <img class="img-fluid" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/9/8/d/-original-imahzxavsgfbp4rv.jpeg?q=70" alt="">
+           <div class="row align-items-center">
+              <div class="col-sm-6 text-end p-4">
+                 <img class="img-fluid" style="max-height:280px;" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1452&auto=format&fit=crop" alt="MacBook Pro">
               </div>
               <div class="col-sm-6">
-                 <h6>fake Product</h6>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <button type="button" class="btn btn-primary">Shop Now</button>
+                 <h3>MacBook Pro M3</h3>
+                 <p class="text-muted">Supercharged by M3 Pro chip. 36GB RAM, 1TB SSD, 16.2" Liquid Retina XDR display. Up to 22 hours of battery life.</p>
+                 <h4 class="text-primary">₹1,99,999</h4>
+                 <div class="mb-2">
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-half text-warning"></i>
+                   <small class="text-muted ms-1">(4.5)</small>
+                 </div>
+                <button type="button" class="btn btn-primary btn-lg">Shop Now</button>
               </div>
             </div>
            </div>
         <div class="carousel-item ">
-           <div class="row">
-              <div class="col-sm-6 text-end ">
-                 <img class="img-fluid" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/9/8/d/-original-imahzxavsgfbp4rv.jpeg?q=70" alt="">
+           <div class="row align-items-center">
+              <div class="col-sm-6 text-end p-4">
+                 <img class="img-fluid" style="max-height:280px;" src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1227&auto=format&fit=crop" alt="iPhone 15 Pro Max">
               </div>
               <div class="col-sm-6">
-                 <h6>fake Product</h6>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <button type="button" class="btn btn-primary">Shop Now</button>
+                 <h3>iPhone 15 Pro Max</h3>
+                 <p class="text-muted">A17 Pro chip. 256GB storage. 48MP camera with 5x optical zoom. Titanium design. USB-C.</p>
+                 <h4 class="text-primary">₹79,999</h4>
+                 <div class="mb-2">
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <small class="text-muted ms-1">(4.7)</small>
+                 </div>
+                <button type="button" class="btn btn-primary btn-lg">Shop Now</button>
               </div>
             </div>
            </div>
         <div class="carousel-item ">
-           <div class="row">
-              <div class="col-sm-6 text-end ">
-                 <img class="img-fluid" src="https://rukminim2.flixcart.com/image/312/312/xif0q/computer/9/8/d/-original-imahzxavsgfbp4rv.jpeg?q=70" alt="">
+           <div class="row align-items-center">
+              <div class="col-sm-6 text-end p-4">
+                 <img class="img-fluid" style="max-height:280px;" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1099&auto=format&fit=crop" alt="Smart Watch">
               </div>
               <div class="col-sm-6">
-                 <h6>fake Product</h6>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <button type="button" class="btn btn-primary">Shop Now</button>
+                 <h3>Apple Watch Ultra 2</h3>
+                 <p class="text-muted">49mm titanium case. GPS + Cellular. Always-On Retina display. 36-hour battery life. Dive computer included.</p>
+                 <h4 class="text-primary">₹12,999</h4>
+                 <div class="mb-2">
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <i class="bi bi-star-fill text-warning"></i>
+                   <small class="text-muted ms-1">(4.6)</small>
+                 </div>
+                <button type="button" class="btn btn-primary btn-lg">Shop Now</button>
               </div>
             </div>
            </div>
@@ -367,27 +399,80 @@
      </div>
 
      <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-8">
-                  <img class="img-fluid" src="https://rukminim2.flixcart.com/image/1920/1920/xif0q/computer/o/2/x/-original-imahzxavfbs8zzhu.jpeg?q=90" alt="">
-                </div>
-                <div class="col-sm-4">
-                  <img class="img-fluid" src="https://rukminim2.flixcart.com/image/1920/1920/xif0q/computer/e/3/g/-original-imahzxavhy3fk4zz.jpeg?q=90" alt="">
-                  <hr>
-                  <img class="img-fluid" src="https://rukminim2.flixcart.com/image/1920/1920/xif0q/computer/9/8/d/-original-imahzxavsgfbp4rv.jpeg?q=90" alt="">
-                </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1452&auto=format&fit=crop" class="card-img-top" alt="MacBook Pro">
+            <div class="card-body text-center d-flex flex-column">
+              <h6>MacBook Pro M3</h6>
+              <div class="rating-stars mb-1">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <small class="text-muted ms-1">(4.5)</small>
               </div>
+              <p class="text-muted small flex-grow-1">Apple M3 Pro, 36GB RAM, 1TB SSD, 16.2" Liquid Retina XDR display.</p>
+              <strong class="d-block mb-2 fs-5">₹1,99,999</strong>
+              <button class="btn btn-primary w-100">Buy Now</button>
             </div>
-            <div class="card-footer alert alert-primary mb-0">
-              <div class="d-flex justify-content-between">
-              <strong>MacBook Pro</strong>
-              <strong>1,99,999/-</strong>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?q=80&w=1227&auto=format&fit=crop" class="card-img-top" alt="iPhone 15 Pro Max">
+            <div class="card-body text-center d-flex flex-column">
+              <h6>iPhone 15 Pro Max</h6>
+              <div class="rating-stars mb-1">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <small class="text-muted ms-1">(4.7)</small>
               </div>
-              <button type="button" class="btn btn-outline-primary my-3 w-100">Buy Now</button>
+              <p class="text-muted small flex-grow-1">A17 Pro, 256GB, 48MP camera, 5x optical zoom, titanium design.</p>
+              <strong class="d-block mb-2 fs-5">₹79,999</strong>
+              <button class="btn btn-primary w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1099&auto=format&fit=crop" class="card-img-top" alt="Smart Watch">
+            <div class="card-body text-center d-flex flex-column">
+              <h6>Apple Watch Ultra 2</h6>
+              <div class="rating-stars mb-1">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <small class="text-muted ms-1">(4.6)</small>
+              </div>
+              <p class="text-muted small flex-grow-1">49mm titanium, GPS+Cellular, Always-On Retina, 36hr battery.</p>
+              <strong class="d-block mb-2 fs-5">₹12,999</strong>
+              <button class="btn btn-primary w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card product-card h-100">
+            <img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=1088&auto=format&fit=crop" class="card-img-top" alt="Headphones">
+            <div class="card-body text-center d-flex flex-column">
+              <h6>Sony WH-1000XM5</h6>
+              <div class="rating-stars mb-1">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <small class="text-muted ms-1">(4.4)</small>
+              </div>
+              <p class="text-muted small flex-grow-1">Noise cancellation, 30hr battery, Auto NC Optimizer, multipoint.</p>
+              <strong class="d-block mb-2 fs-5">₹2,499</strong>
+              <button class="btn btn-primary w-100">Buy Now</button>
             </div>
           </div>
         </div>
